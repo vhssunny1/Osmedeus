@@ -8,7 +8,7 @@ from modules import subdomain
 from modules import recon
 from modules import takeover
 from modules import screenshot
-from modules import portscan
+#from modules import portscan
 from modules import gitscan
 from modules import burpstate
 from modules import brutethings
@@ -59,7 +59,7 @@ def normal(options):
     utils.print_info('This gonna take a while')
 
     # #Scanning all port using result from subdomain scanning and also checking vulnerable service based on version
-    portscan.PortScan(options)
+ #   portscan.PortScan(options)
 
     #Directory scan
     dirbrute.DirBrute(options)
@@ -88,9 +88,9 @@ def specific(options, module):
         #Discovery IP space
         ipspace.IPSpace(options)
 
-    if 'portscan' in module:
+  #  if 'portscan' in module:
         # scanning port, service and vuln with masscan and nmap
-        portscan.PortScan(options)
+   #     portscan.PortScan(options)
 
     if 'headers' in module:
         headers.HeadersScan(options)
